@@ -1,0 +1,36 @@
+.todo{
+    display: inline-block;
+    justify-content: center;
+    min-height: 50px;
+    background-color: white;
+    margin: 6px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+.container{
+    display: inline-block;
+    border: 2px black;
+}
+
+.list_container{
+    border: 2px black;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.list{
+    color: #060607;
+	font-size: 18px;
+	list-style: none;
+	text-align: center;
+	margin: 15px 15px;
+    border: 2px solid black;
+    width: 50%;
+    height: 50%;
+}
+.list:hover{
+    background-color: black;
+    color: white;
+}

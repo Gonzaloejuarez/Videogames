@@ -41,7 +41,7 @@ const types = async () => {
 conn.sync({ force: true }).then(() => {
   server.listen(3001, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
-    /* axios.get(`https://api.rawg.io/api/games/1?key=${API_KEY}`)
+     /* axios.get(`https://api.rawg.io/api/games/1?key=${API_KEY}`)
     .then((element) => {
       Videogame.create({
         name : element.data.name,
@@ -52,8 +52,8 @@ conn.sync({ force: true }).then(() => {
         platforms : element.data.parent_platforms,
       })
       .then((e) => e.setGenres(1))
-    })
-     */
+    }) */
+     
     types();
     
   });

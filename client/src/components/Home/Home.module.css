@@ -1,0 +1,47 @@
+.base{
+    background-color: rgb(221, 217, 217);
+}
+.cards{
+    display:grid;
+        width: 75%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        margin: auto;
+        justify-content:center;
+        text-align:center;
+        color:rgb(7, 7, 7);
+        padding-bottom: 15px;
+}
+.cartas {
+    border: 1px solid white;
+    display:block;
+    margin-top:10px;
+    margin-left: 10px; 
+    border-radius:15px;
+    border-color: black;
+    width: 100%;
+    height: 100%;
+    text-align:center;
+    background-color: #ffffff;
+}
+    img{
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 90px;
+        margin-top: 10px;
+        border: white solid;
+    }
+.link{
+        color: inherit;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+}
+.abajo{
+    display: flex;
+    align-items: center;
+    
+    justify-content:space-around;
+    color: indigo;
+}

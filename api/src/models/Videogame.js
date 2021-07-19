@@ -28,6 +28,9 @@ module.exports = (sequelize) => {
     rating : {
       type : DataTypes.STRING
     },
+    image:{
+      type: DataTypes.STRING,
+    },
     platforms: {
       type: DataTypes.JSON, 
       allowNull: false,
