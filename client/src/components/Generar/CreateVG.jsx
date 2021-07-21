@@ -157,7 +157,7 @@ export const  CreateVG = () => {
                             </div>
                         ) : null
                    }
-                   <div className={style.aparte}>
+                   <div className={style.image}>
                         <img className={style.img} src={input.image}/>
                         <select className ={style.select}onChange={e=>handleImage(e)}>
                             {IMAGEN &&

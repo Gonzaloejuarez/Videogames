@@ -13,8 +13,8 @@ function App() {
       <Route exact path='/' component={Landing}></Route>
       <Route path={["/home", "/videogame/:id", "/create"]}><Nav /></Route>
       <Route path='/home' component={Filter}/>
-      <Route path='/home' component={Paginate} /> 
       <Route path='/home' component={Home}/>
+      <Route path='/home' component={Paginate} /> 
       <Route path='/videogame/:id' component={VideoGame}/>
       <Route path='/create' component={CreateVG} />
     </div>
