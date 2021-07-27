@@ -5,7 +5,7 @@ import { GAMES_ID, IMAGEN, imgDefault } from '../../utils/constants';
 import  React , {useState, useEffect } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {Validate} from '../../metodos/metodos'
-
+import { Link } from 'react-router-dom';
 
 export const  CreateVG = () => {
     const dispatch = useDispatch()
@@ -140,23 +140,29 @@ export const  CreateVG = () => {
    return (
        <div className={style.todo}>
            <div>
+           <Link to='/home' className={style.boton}>{'Salir'}</Link>
+           </div>
+           <div className={style.titulo}>
                 <h1>Crea tu VideoJuego</h1>
             </div>
            <div className={style.s}>
                 <form onSubmit={ e => handleFormulario(e)} className={style.contenido}>
-                    <div className={style.image}>
-                   { alert.error ? (
-                            <div>
+                    <div >
+                    {
+                        alert.error ? (
+                            <div className={style.errors}>
                                 <ul>
                                     {
                                         Object.values(error).map(el=>(
-                                            <li key={el}>{el}</li>
+                                            <li key={el} className={style.errorstext}>
+                                                {el}
+                                            </li>
                                         ))
                                     }
                                 </ul>
                             </div>
                         ) : null
-                   }
+                    }
                    <div className={style.image}>
                         <img className={style.img} src={input.image}/>
                         <select className ={style.select}onChange={e=>handleImage(e)}>
@@ -172,27 +178,27 @@ export const  CreateVG = () => {
                     </div>
                     <div className={style.formulario}>
                     <div className={style.nombre}>
-                        <label>Nombre</label>
+                        <label id={style.label}> Nombre</label>
                         <input id='name' type="text" placeholder='Escriba nombre' 
                         value={input.name} onChange={e => handleGonza(e) }/>
                     </div>
                     <div className={style.nombre}>
-                        <label>Descripcion</label>
+                        <label id={style.label}>Descripcion</label>
                         <input id='description'type="text" placeholder='Escriba una descripcion'
                         value={input.description} onChange={e => handleGonza(e) }/>
                     </div>
                     <div className={style.nombre}>
-                        <label>Rating</label>
+                        <label id={style.label}>Rating</label>
                         <input id='rating' type="number"
                         value={input.rating} onChange={e => handleGonza(e) }/>
                     </div>
                     <div className={style.nombre}>
-                        <label>Fecha de Lanzamiento</label>
+                        <label id={style.label}>Fecha de Lanzamiento</label>
                         <input id='released' type="date"
                         value={input.released} onChange={e => handleGonza(e) }/>
                     </div>
                     <div className={style.nombre}>
-                        <label>Plataformas</label>
+                        <label id={style.label}>Plataformas</label>
                         <select id='plataforms' /* value={input.platforms} */ onChange={e => handlePlatform(e)} 
                         onClick={e => handleGonza(e) }>
                             {
@@ -203,14 +209,14 @@ export const  CreateVG = () => {
                         </select>
                         {typePlatform &&
                             typePlatform.map((p,i)=>(
-                                <div key={i} className='generos-add'>
-                                    <label className='generos-add'>{p}</label>
+                                <div key={i} className={style.generosadd}>
+                                    <label className={style.generosadd}>{p}</label>
                                 </div>
                             ))
                         }
                     </div>
                     <div className={style.nombre}>
-                        <label>Genero</label>
+                        <label id={style.label}>Genero</label>
                         <select id='genre' 
                         onChange={e => handleGenres(e)} onClick={e => handleGonza(e) }>
                             {
@@ -222,19 +228,24 @@ export const  CreateVG = () => {
                         {typeGenre &&
                             typeGenre.map((el, i) => (
                                 <div key={i} >
-                                    <label >{el}</label>
+                                    <label id={style.label}>{el}</label>
                                 </div>
                             ))
                         }
-                        <button onClick={e => setInput({...input, genres : [...input.genres, 
-                             getGenres.filter(e => 
-                             e.name === input.genre
-                            )] 
-                          })
-                        }>Agregar</button>
-                        
+                 </div>
+                 <div className={style.divtypecontainer}>
                     </div>
+                    <div className={style.btncontainer}>
+                        <button className={style.btnsubmit} type='submit'> Crear Juego </button>
                     </div>
+                </div>
+                {
+                    alert.create ? (
+                        <div className={style.createconfirm}>
+                            <h3 className='message--create'>El juego fue creado!</h3>
+                        </div>
+                    ) : null
+                }
                 </form>
            </div>
        </div>

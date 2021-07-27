@@ -1,6 +1,6 @@
 import style from './Filter.module.css'
 import { setGenres, setOrder, setType } from '../../actions/actions';
-import { get_Genres } from '../../actions/actions';
+import { get_Genres, getGames } from '../../actions/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
@@ -23,6 +23,7 @@ export const Filter = () => {
     }
 
     return (
+        
         <div className={style.genres}>
             <div className={style.base}>
                     <label for='generos'>Mostrar por Genero</label>
@@ -35,9 +36,10 @@ export const Filter = () => {
                         }
                     </select>
                 </div>
+       
                 <div className={style.base}>
                     <label for='Order'>Mostrar por Orden</label>
-                    <select className={style.sele} name='Order' id='Order' onChange={(e) => handleOrder(e)}>
+                    <select className={style.sele} name='Order' id='Order' onChange={(e) => handleOrder(e)} >
                         <option value='A-Z'>A-Z</option>
                         <option value='Z-A'>Z-A</option>
                         <option value='Mayor rating'>Mayor Rating</option>
@@ -51,6 +53,7 @@ export const Filter = () => {
                         <option value='DB'>Creados</option>
                     </select>
                 </div>
+        
         </div>
     )
 }

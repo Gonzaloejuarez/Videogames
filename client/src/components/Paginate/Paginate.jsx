@@ -28,14 +28,6 @@ export const Paginate = () => {
         })
     }
 
-    /*  useEffect(()=>{
-         setPaged({
-             page:0,
-             max: 15,
-             min:0
-         })
-     },[gamesViews]) */
-     console.log(paged)
     return (
         <div className={style.todo}>
             {

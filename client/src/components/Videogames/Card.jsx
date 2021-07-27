@@ -2,14 +2,16 @@ import style from './Videogames.module.css'
 
 export const Card = ({name, description, image, genres, rating, platforms}) => {
     
-return(
-         <div className={style.card}>
+    
+    return(
+        <div className={style.card}>
             <div className={style.title_img}>
                 <img src={image} alt={name}/>
             </div>
             <div className={style.descript_rating}>
                 <h1>{name}</h1>
-                <dl className={style.d1}>Descripcion: {description}</dl>
+                 <div className={style.d1} dangerouslySetInnerHTML={{__html: description}} /> 
+                {/*  <dl className={style.d1}>Descripcion: {description }</dl> */} 
                 <p>Rating: {rating}</p>
                 <div className={style.plat_genres}>
                     <div className={style.genres}>
@@ -19,6 +21,7 @@ return(
                                     return <li key={i}>{el.name}</li>
                                 })
                             }
+                            {console.log(genres)}
                     </div>
                     <div className={style.plat}>
                         <p> Plataformas: </p>

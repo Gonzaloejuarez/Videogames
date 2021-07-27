@@ -1,24 +1,18 @@
-.todo{
-    background-color: rgb(139, 134, 134);
-}.contenido{
+
+
+.contenido{
     border-radius:5px;
+    width: 90%;
+    margin:10px auto;
     display:grid;
     grid-template-columns:1fr 1fr;
-    background-color: #f3afab;
+    background-color: #686f7e;
 }
-.formulario{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-direction: column;
-    align-items: center;
-}
-
 .image{
-    display:flex;
-    justify-content: center;
+    display:block;
     width:98%;
-    height:90%;
-    margin:0;
+    height:20%;
+    margin-left:4px;
 }
 .select{
     justify-content: center;
@@ -32,4 +26,72 @@
 .nombre{
     display:block;
     height:50px;
+    color: white;
+}
+.titulo{
+    color : rgb(255, 255, 255);
+}
+.createconfirm{
+    margin:auto;
+    font-size:12px;
+    color: white;
+}
+.errorstext{
+    color:white;
+            font-size: 30px;
+            z-index:99999999;
+}
+.errors{
+    margin:auto;
+            font-size:12px;
+            font-family:'Press Start 2P';
+}
+.formulario{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-wrap: nowrap;
+}
+.btncontainer{ 
+    margin: 50px auto 0px auto;
+    margin-left: 0px;
+}
+.btnsubmit{
+    display: flex;
+    border-radius:3px;
+    outline:none;
+    border:none;
+    background-color:white;
+    box-shadow:2px 2px black;
+    padding:10px 15px;
+    margin: 5px;
+    margin-left: 5px;
+}
+.generosadd{
+    font-size:14px;
+}
+
+#label{display:block;
+margin-bottom:5px;
+}
+.img{
+    display:flex;
+    width: 100%;
+    height:415px;
+    margin-right: 20%;
+    border-radius: 18px;
+    border: 5px solid rgb(117, 60, 192);
+}
+.boton{
+    display:block;
+    background-color: brown;
+    color:rgb(254, 254, 255);
+    border-radius: 20px;
+    border: 2px solid black;
+    text-decoration:none;
+    width:120px;
+    font-size:20px;
+    padding:5px;
+    margin:10px 0 20px 30px ;
 }

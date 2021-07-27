@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getGames } from '../../actions/actions';
 import style from './Home.module.css'
-
+import {Cargando} from './Cargando'
 export function Home () {
     const dispatch = useDispatch();
     const juegos = useSelector( state => state.gamesViews.now);
@@ -39,8 +39,8 @@ export function Home () {
                 }
             </div>
         </>
-        :
-         <>
+                :    
+                <>
             <div className={style.cards}>
                 {
                     juegos && juegos.map((juego,i)=>{

@@ -1,36 +1,33 @@
 .todo{
     display: inline-block;
-    justify-content: center;
-    min-height: 50px;
-    background-color: white;
-    margin: 6px;
-    height: 75px;
+    padding: 2px;
+    margin: 5px;
+    border-radius: 40px;
+    background-color: rgb(72, 72, 110);
     border: 2px solid black;
-    border-radius: 30px;
 }
-.container{
+.list_container{
     display: inline-block;
-    border: 2px black;
+    scroll-margin-block-start: 2px;
+}
+.list{
+    color: #ffffff;
+	font-size: 18px;
+	list-style: none;
+	text-align: center;
+    width: 10px;
+    margin-block-start: 5px;
+	/* margin: 15px 15px; */
+}
+.list:hover{
+    background-color: blanchedalmond;
+    color: black;
 }
 
-.list_container{
-    border: 2px black;
+.li{
+    display: inline;
     color: black;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
-}
-.list{
-    color: #060607;
-	font-size: 18px;
-	list-style: none;
-	text-align: center;
-	margin: 15px 15px;
-    border: 2px solid black;
-    width: 50%;
-    height: 50%;
-}
-.list:hover{
-    background-color: black;
-    color: white;
 }
