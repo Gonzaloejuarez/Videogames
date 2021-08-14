@@ -2,7 +2,7 @@ const axios = require('axios');
 const {VIDEOGAMES_URL} = require('../utils/constantes');
 const {API_KEY} = process.env;
 
-const getApi = async(req) =>{
+const getApi = async(_req) =>{
     
 
     let callApi1 = await axios.get(`${VIDEOGAMES_URL}?key=${API_KEY}&page_size=40`);

@@ -39,21 +39,9 @@ const types = async () => {
   }
 }
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
+  server.listen(process.env.PORT, () => {
     console.log('%s listening at 3001'); // eslint-disable-line no-console
-     /* axios.get(`https://api.rawg.io/api/games/1?key=${API_KEY}`)
-    .then((element) => {
-      Videogame.create({
-        name : element.data.name,
-        released: element.data.released,
-        description : element.data.description,
-        image: element.data.background_image,
-        rating : element.data.rating,
-        platforms : element.data.parent_platforms,
-      })
-      .then((e) => e.setGenres(1))
-    }) */
-     
+    
     types();
     
   });

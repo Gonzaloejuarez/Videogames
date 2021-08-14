@@ -11,7 +11,7 @@ const videogame = {
   platforms: ['Nintendo']
 };
 
-xdescribe('Videogame routes', () => {
+describe('Videogame routes', () => {
   before(() => conn.authenticate()
   .catch((err) => {
     console.error('Unable to connect to the database:', err);

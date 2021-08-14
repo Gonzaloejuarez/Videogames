@@ -1,8 +1,8 @@
-export const VIDEOGAMES_URL = 'http://localhost:3001/videogames';
-export const GAMES_ID = 'http://localhost:3001/videogame/';
-export const VIDEOGAMES_NOMBRE = 'http://localhost:3001/videogames?';
-export const VIDEOGAMES_GENEROS = 'http://localhost:3001/genres';
-export const VIDEOGAMES_TOTAL = 'http://localhost:3001/total';
+export const VIDEOGAMES_URL = '/videogames';
+export const GAMES_ID = '/videogame/';
+export const VIDEOGAMES_NOMBRE = '/videogames?';
+export const VIDEOGAMES_GENEROS = '/genres';
+export const VIDEOGAMES_TOTAL = '/total';
 
 export const PAGINAS = 15;
 

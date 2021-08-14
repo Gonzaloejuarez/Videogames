@@ -18,6 +18,7 @@ export const Search = () => {
         if(name.length){
             dispatch(getName(name))
         }
+        setName('')
     }
     
     return (
@@ -26,7 +27,7 @@ export const Search = () => {
         <div className={style.bus}>
             <form className={style.form}  onSubmit={el => handleSubmit(el) }>
                 <span className={style.icon}><i class="fa fa-search"></i></span>
-                <input className={style.inp} type='text' placeholder='Search...' onChange={(el) => handleChange(el)} />
+                <input value={name}className={style.inp} type='text' placeholder='Search...' onChange={(el) => handleChange(el)} />
             </form>
         </div>
         </>
