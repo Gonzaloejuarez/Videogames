@@ -25,7 +25,20 @@
         <img height='300' src='./images/Escena4.png' />
     </a>
     </div>
-    
+ 
+ <p>
+  <h2>Crear un videojuego </h2>
+  <p>Tambien podremos generar un nuevo videojuego</p>
+    <img width='500' src='./images/Escena5.png' />
+  </p>
+  
+  <p> 
+  <h2>Paginado</h2>
+  <p>Por ultimo tenemos el paginado, en el cual podremos ir en pagina en pagina viendo asi nuevos juegos</p>
+  
+  <img  width='400' src='./images/Escena6.png' />
+  </p>
+  
     
 Tecnologias usadas
 <table>
